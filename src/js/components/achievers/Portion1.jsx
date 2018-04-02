@@ -18,7 +18,6 @@ class Portion1 extends React.Component {
 						image={item.image}
 					/>
 				))}
-				<div className="clear" />
 			</div>
 		);
 	}
