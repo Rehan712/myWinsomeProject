@@ -1,30 +1,40 @@
-import React from 'react'
-import {connect} from 'react-redux'
+import React from 'react';
+import { connect } from 'react-redux';
+import { arrayOf, shape, number, string } from 'prop-types';
 
-
-export const Event=({counter,events})=>{
-		console.log('counter  in events',counter)
-		return [...events].slice(counter,counter+4).map(({...item},index)=>(
-				<div key={index} className="event">
-					<div className="comingEvents">
-						{item['event']}
-					</div>
-					<div className="comingEventsDates">
-							{item['eventDate']}
-					</div>
-					<div className="time">
-							{item['time']}
-					</div>
-					<div className="clear"></div>
-				</div>
-				
-
-		))
+export class Event extends React.Component {
+	renderArray() {
+		const { counter, events } = this.props;
+		return [...events].slice(counter, counter + 4).map(({ ...item }) => (
+			<div key={item.id} className="event">
+				<div className="comingEvents">{item.event}</div>
+				<div className="comingEventsDates">{item.eventDate}</div>
+				<div className="time">{item.time}</div>
+				<div className="clear" />
+			</div>
+		));
 	}
-function mapStateToProps({calender}) {
-	return {
-		counter:calender.counter,
-		events:calender.events
+	render() {
+		return <div>{this.renderArray()}</div>;
 	}
 }
-export default connect(mapStateToProps,null)(Event)
+
+function mapStateToProps({ calender }) {
+	return {
+		counter: calender.counter,
+		events: calender.events
+	};
+}
+
+Event.propTypes = {
+	counter: number.isRequired,
+	events: arrayOf(
+		shape({
+			id: number.isRequired,
+			event: string.isRequired,
+			eventDate: string.isRequired,
+			time: string.isRequired
+		})
+	).isRequired
+};
+export default connect(mapStateToProps, null)(Event);
