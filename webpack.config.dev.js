@@ -1,8 +1,5 @@
 module.exports = {
-  entry: [
-    './src/js/index.jsx',
-    './src/css/styles.scss'
-  ],
+  entry: ['./src/js/index.jsx', './src/css/styles.scss'],
   output: {
     path: `${__dirname}/dist/js`,
     filename: 'bundle.js',
@@ -19,12 +16,12 @@ module.exports = {
             loader: 'babel-loader',
             options: {
               presets: ['env', 'react'],
-              plugins: ["transform-object-rest-spread",]
+              plugins: ['transform-object-rest-spread']
             }
-          },
-          {
-            loader: 'eslint-loader'
           }
+          // {
+          //   loader: 'eslint-loader'
+          // }
         ]
       },
       {
@@ -35,12 +32,12 @@ module.exports = {
             loader: 'babel-loader',
             options: {
               presets: ['env'],
-              plugins: ["transform-object-rest-spread",]
+              plugins: ['transform-object-rest-spread']
             }
-          },
-          {
-            loader: 'eslint-loader'
           }
+          // {
+          //   loader: 'eslint-loader'
+          // }
         ]
       },
       {
@@ -72,7 +69,7 @@ module.exports = {
   },
 
   devServer: {
-    contentBase: "./dist",
+    contentBase: './dist',
     historyApiFallback: true
   },
 

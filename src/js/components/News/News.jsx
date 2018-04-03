@@ -43,9 +43,9 @@ export default class News extends Component {
 						</div>
 					</div>
 
-					<div className="clear" />
+					<div className="clearRight" />
 				</div>
-				<div className="clear" />
+				<div className="clearLeft" />
 			</div>
 		);
 	}

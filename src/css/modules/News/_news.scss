@@ -9,10 +9,11 @@ $box-border-color: #404040;
 //######### SCSS of News ###################
 .News {
 	float: right;
+	width: 25%;
 	.news-Box {
 		height: 750px;
-		width: 25%;
-		float: right;
+		width: 100%;
+		float: left;
 
 		.uper-box {
 			width: 100%;

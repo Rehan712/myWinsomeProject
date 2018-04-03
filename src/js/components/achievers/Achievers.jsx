@@ -12,6 +12,7 @@ export const Achievers = ({ achieversData }) => (
   <div>
     <Hero style={'header-image'} />
     <div className="achievers">
+      <News />
       <div className="content">
         <FirstHeading
           heading={achieversData.firstPart.heading}
@@ -20,7 +21,7 @@ export const Achievers = ({ achieversData }) => (
         <Portion1 achieversData={achieversData} />
         <Portion2 achieversData={achieversData} />
       </div>
-      <div className="clear" />
+      <div className="clearRight" />
     </div>
   </div>
 );
