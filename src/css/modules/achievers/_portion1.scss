@@ -1,8 +1,8 @@
 .portion1 {
 	margin-top: 3%;
 	width: 100%;
+	border: 2px solid blue;
 	float: left;
-	border: 2px solid black;
 	h2 {
 		margin-left: 6.5%;
 	}
@@ -14,15 +14,22 @@
 		margin-left: 7%;
 	}
 	.part {
-		width: 34%;
+		width: 400px;
 		height: 360px;
 		float: left;
 		margin: 0 auto 3% 2%;
 		border: 2px solid black;
+		@media (max-width: 1090px) {
+				width: 70%;
+			}
+			@media (max-width: 747px) {
+				width: 70%;
+			}
+
 		img {
 			float: left;
-			width: 150px;
-			height: 150px;
+			width: 200px;
+			height: 200px;
 			border: 2px solid white;
 			margin: 4% auto auto 5%;
 			border: 1px solid white;
@@ -31,9 +38,9 @@
 			width: 40%;
 			float: left;
 			margin-left: 2%;
-			margin-top: 63px;
+			margin-top: 120px;
 			border: 2px solid black;
-			@media (max-width: 1090px) {
+			@media (max-width: 747px) {
 				margin-top: 0px;
 			}
 			h4 {

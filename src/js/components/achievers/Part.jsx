@@ -12,7 +12,7 @@ const Part = ({ text, textHeading, image }) => (
 			</div>
 			<div className="clear" />
 		</div>
-		<div className="clear" />
+		<div className="clearRight" />
 	</div>
 );
 

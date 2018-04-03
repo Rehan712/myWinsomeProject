@@ -12,7 +12,6 @@ export const Achievers = ({ achieversData }) => (
   <div>
     <Hero style={'header-image'} />
     <div className="achievers">
-      <News />
       <div className="content">
         <FirstHeading
           heading={achieversData.firstPart.heading}

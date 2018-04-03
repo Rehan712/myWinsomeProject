@@ -22,7 +22,14 @@ class Portion1 extends React.Component {
 		);
 	}
 	render() {
-		return <div className="portion1">{this.renderArrayHandler()}</div>;
+		return (
+			<div>
+				<div className="portion1">
+					{this.renderArrayHandler()}
+				</div>
+				<div className="clearLeft" />
+			</div>
+		)
 	}
 }
 
