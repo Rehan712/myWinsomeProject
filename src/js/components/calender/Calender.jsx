@@ -14,9 +14,9 @@ class Calender extends React.Component {
 			<MediaQuery {...props} minWidth={768} maxWidth={991} />
 		);
 		const Mobile = props => (
-			<MediaQuery {...props} maxWidth={767} minWidth={651} />
+			<MediaQuery {...props} maxWidth={767} minWidth={600} />
 		);
-		const SmallMobile = props => <MediaQuery {...props} maxWidth={650} />;
+		const SmallMobile = props => <MediaQuery {...props} maxWidth={601} />;
 		const Default = props => <MediaQuery {...props} minWidth={768} />;
 
 		return (
