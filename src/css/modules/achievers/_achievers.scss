@@ -3,8 +3,22 @@
 	font-family: Roboto;
 	overflow: hidden;
 	background-color: #bac6c6;
+	.achieversNews {
+		float: right;
+		width: 25%;
+	}
 	.content {
 		float: left;
 		width: 75%;
+		@media (max-width: 767px) {
+			width: 100%;
+		}
+	}
+	.achievers-news {
+		float: right;
+		width: 25%;
+		@media only screen and (max-width: 768px) {
+			width: 100%;
+		}
 	}
 }

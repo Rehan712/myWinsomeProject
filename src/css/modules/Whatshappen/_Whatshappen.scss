@@ -1,230 +1,168 @@
-$career-medium-screen:400px;
-$career-large-screen:992px;
-
-
+$career-resp-screen: 768px;
 
 //scss start
 
-#sec-2{
+#sec-2 {
     height: 800px;
     @include image('../images/chem-formula-pattern.jpg');
-    padding:60px 0 0 0;
+    padding: 60px 0 0 0;
 
-    
-    .wraper{
+    .wraper {
         @include wrapper(90%);
+        padding: 0 10px 50px 10px;
         //border:1px red solid;
-        
-        
-        .des{
+
+        .des {
             //width: 80%;
-            margin:0 auto;
+            margin: 0 auto;
             //background-color: grey;
-            
-            
-            h2{
-                font-size: 18px;
-                margin:0px;
+
+            h2 {
+                font-size: 25px;
+                margin: 0px;
                 font-weight: 700;
                 text-align: center;
-                padding:40px 0px 30px 0px;
-                box-sizing:border-box;
-
-                @media only screen and (min-width:$career-medium-screen){
-
-                    font-size: 30px;
-                    padding: 50px 0px 35px 0px;
-                    font-weight: lighter;
-
-                }
-                @media only screen and (min-width:$career-large-screen){
-
+                padding: 40px 0px 35px 0px;
+                box-sizing: border-box;
+                @media only screen and (min-width: $career-resp-screen) {
                     font-size: 40px;
                     padding: 60px 0px 40px 0px;
-                    font-weight: lighter;
-
+                    font-weight: 600;
                 }
-               
             }
-            
-            
-            span{
-                
+
+            span {
                 text-align: center;
                 display: block;
-                font-size: 11px;
+                font-size: 16px;
                 font-weight: lighter;
-                padding-bottom: 20px;
-                //background-color: red;
-                @media only screen and (min-width: $career-medium-screen){
-
-                    font-size: 17px;
-                    
-                }
-                @media only screen and (min-width:$career-large-screen){
-
+                padding-bottom: 35px;
+                @media only screen and (min-width: $career-resp-screen) {
                     font-size: 20px;
-
                 }
             }
-            
-            
         }
-        
 
-        .slide-show{
+        .slide-show {
             height: 540px;
             //background-color: lightblue;
             clear: both;
-           
-            .arrows{
-                width: 6%;
+            width: 100%;
+
+            .arrows {
+                width: 8%;
                 height: 480px;
                 //background-color: green;
                 display: inline-block;
-                
             }
-            .left{
-                    float: left;
+            .left {
+                float: left;
             }
-            .right{
-                    float: right;
+            .right {
+                float: right;
             }
 
-            .arrow{
-                border-top:2px $secondary-color solid;
-                border-left:2px $secondary-color solid;
-                display:inline-block;
-                height:30px;
-                width:30px;
-                margin:210px 0;
-                margin-left:15px;
+            .arrow {
+                border-top: 2px $secondary-color solid;
+                border-left: 2px $secondary-color solid;
+                display: inline-block;
+                height: 50px;
+                width: 50px;
+                margin: 210px 0;
+                margin-left: 15px;
                 cursor: pointer;
-
-                @media only screen and (min-width: $career-medium-screen){
-
-                        height: 60px;
-                        width:60px; 
-                        
+                &:focus {
+                    outline: 0;
                 }
-
-                @media only screen and (min-width:$career-large-screen){
-
-                        height:80px;
-                        width:80px;
-
-                    
-
+                &:active {
+                    outline: 0;
                 }
-
-               
-
-            } 
-             .previous{
-
-                transform: rotate(-45deg);
-
-
+                @media only screen and (min-width: $career-resp-screen) {
+                    height: 60px;
+                    width: 60px;
+                }
             }
-            .next{
+            .previous {
+                transform: rotate(-45deg);
+            }
+            .next {
                 transform: rotate(135deg);
                 float: right;
                 margin-right: 15px;
-                
-            }  
+            }
 
-            .whatsHappen-card{
-
-                width: 88%;
+            .whatsHappen-card {
+                width: 84%;
                 height: 480px;
-                //background-color: purple;
                 float: left;
-                //margin-left: 1%;
-                .whatsHappen-box{
-                    margin: 0 auto;
-                    //padding-right: 10px;
-                }
-                // @media only screen and (max-width:$career-large-screen){
-
-                //         width: 80%;
-
-                // }
-
-
-                .whatshappen{
-
-                   height: 480px;
-                   width: 48%;
-                   
-                   //margin-left: 20px;
-                   border:1px $accent-color solid; 
-                   box-sizing:border-box;
-                   // @media only screen and (max-width:$career-large-screen){
-
-                   //      width: 80%;
-                   //      margin-left: 0 20px;
-
-                   //  }
-
-                   
-
-
-                    .img{
-                           
-                           height: 280px;
-                           width: 100%;
-
-                           overflow: hidden;
-                           img{
-                           height: 280px;
-                           width: 100%; 
-                           object-fit:cover;
-                               &:hover{
-                               height: 300px;
-                               width: 110;
-                               }
-                            }
-                              
+                .wh-normal-view {
+                    display: none;
+                    @media only screen and (min-width: $career-resp-screen) {
+                        display: block;
+                        margin: 0 auto;
                     }
-                    .img-des{
-                        
+                }
+                .wh-responsive-view {
+                    display: block;
+                    margin: 0 auto;
+                    @media only screen and (min-width: $career-resp-screen) {
+                        display: none;
+                    }
+                }
+
+                .whatshappen {
+                    height: 480px;
+                    width: 80%;
+                    border: 1px $accent-color solid;
+                    box-sizing: border-box;
+                    margin: 0 auto;
+                    @media only screen and (min-width: $career-resp-screen) {
+                        width: 48%;
+                        margin: 0;
+                    }
+                    .img {
+                        height: 280px;
+                        width: 100%;
+
+                        overflow: hidden;
+                        img {
+                            height: 280px;
+                            width: 100%;
+                            object-fit: cover;
+                            &:hover {
+                                height: 330px;
+                                width: 115;
+                            }
+                        }
+                    }
+                    .img-des {
                         height: 198px;
                         width: 100%;
-                        padding:15px;
+                        padding: 15px 15px 0 15px;
                         box-shadow: 0px 5px 8px $accent-color;
                         background-color: white;
-                        box-sizing:border-box;
-                        h3{
-                            margin:0px;
-                            color:$primary-color;
+                        box-sizing: border-box;
+                        h3 {
+                            margin: 0px;
+                            color: $primary-color;
                             font-family: $font-family;
                         }
-                        p{
-                            padding-top:20px;
+                        p {
+                            padding-top: 18px;
                             font-size: 18px;
                             text-align: justify;
-                            letter-spacing: 1px;
-                            color:black;
+                            color: black;
                             font-family: $font-family;
-
-
                         }
                     }
-            
                 }
-                
-                
             }
-            .card-0{
-                    float: left;
-                }
-            .card-1{
+            .card-0 {
+                float: left;
+            }
+            .card-1 {
                 float: right;
             }
-            
-           
-            
         }
-        
     }
 }

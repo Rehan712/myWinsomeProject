@@ -18,18 +18,12 @@ class Portion1 extends React.Component {
 						image={item.image}
 					/>
 				))}
+				<div className="clear" />
 			</div>
 		);
 	}
 	render() {
-		return (
-			<div>
-				<div className="portion1">
-					{this.renderArrayHandler()}
-				</div>
-				<div className="clearLeft" />
-			</div>
-		)
+		return <div className="portion1">{this.renderArrayHandler()}</div>;
 	}
 }
 

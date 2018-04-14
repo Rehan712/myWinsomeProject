@@ -7,6 +7,7 @@ const FirstHeading = ({ heading, text }) => (
 			<h2>{heading}</h2>
 			<div className="box" />
 			<p>{text}</p>
+			<div className="clear" />
 		</div>
 		<div className="clear" />
 	</div>

@@ -3,25 +3,31 @@
 	width: 100%;
 	float: left;
 	h2 {
-		margin-left: 6.5%;
+		margin-left: 4.5%;
+		font-size: 30;
+		@media (max-width: 767px) {
+			font-size: 23px;
+		}
 	}
 	.box {
 		width: 13px;
 		height: 13px;
 		background-color: yellow;
 		margin-top: 2.5%;
-		margin-left: 7%;
+		margin-left: 5%;
+		@media (max-width: 767px) {
+			width: 9px;
+			height: 9px;
+		}
 	}
 	.part {
 		width: 400px;
 		height: 360px;
 		float: left;
 		margin: 0 auto 3% 2%;
-		@media (max-width: 1090px) {
-			width: 70%;
-		}
-		@media (max-width: 747px) {
-			width: 70%;
+		@media (max-width: 767px) {
+			width: 300px;
+			margin-top: 10px;
 		}
 
 		img {
@@ -31,14 +37,20 @@
 			border: 2px solid white;
 			margin: 4% auto auto 5%;
 			border: 1px solid white;
+			@media (max-width: 747px) {
+				width: 170px;
+				height: 170px;
+			}
 		}
 		.paragraph {
 			width: 40%;
 			float: left;
 			margin-left: 2%;
 			margin-top: 138px;
-			@media (max-width: 747px) {
+			@media (max-width: 767px) {
 				margin-top: 0px;
+				margin-left: 5%;
+				width: 60%;
 			}
 			h4 {
 				font-weight: bold;
